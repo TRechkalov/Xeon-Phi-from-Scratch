@@ -1,0 +1,60 @@
+src/histogram.c(15): (col. 2) remark: loop was not vectorized: existence of vector dependence
+src/histogram.c(17): (col. 3) remark: vector dependence: assumed FLOW dependence between hist line 17 and age line 16
+src/histogram.c(16): (col. 30) remark: vector dependence: assumed ANTI dependence between age line 16 and hist line 17
+src/histogram.c(17): (col. 3) remark: vector dependence: assumed ANTI dependence between hist line 17 and hist line 17
+src/histogram.c(17): (col. 3) remark: vector dependence: assumed FLOW dependence between hist line 17 and hist line 17
+src/histogram.c(17): (col. 3) remark: vector dependence: assumed FLOW dependence between hist line 17 and hist line 17
+src/histogram.c(17): (col. 3) remark: vector dependence: assumed ANTI dependence between hist line 17 and hist line 17
+src/histogram.c(16): (col. 30) remark: vector dependence: assumed ANTI dependence between age line 16 and hist line 17
+src/histogram.c(17): (col. 3) remark: vector dependence: assumed FLOW dependence between hist line 17 and age line 16
+src/histogram.c(75): (col. 3) remark: vectorization support: reference histLocal has aligned access
+src/histogram.c(75): (col. 3) remark: LOOP WAS VECTORIZED
+src/histogram.c(83): (col. 5) remark: vectorization support: reference histIdx has aligned access
+src/histogram.c(83): (col. 5) remark: vectorization support: reference age has aligned access
+src/histogram.c(82): (col. 4) remark: LOOP WAS VECTORIZED
+src/histogram.c(85): (col. 4) remark: loop was not vectorized: existence of vector dependence
+src/histogram.c(86): (col. 5) remark: vector dependence: assumed ANTI dependence between histLocal line 86 and histLocal line 86
+src/histogram.c(86): (col. 5) remark: vector dependence: assumed FLOW dependence between histLocal line 86 and histLocal line 86
+src/histogram.c(86): (col. 5) remark: vector dependence: assumed FLOW dependence between histLocal line 86 and histLocal line 86
+src/histogram.c(86): (col. 5) remark: vector dependence: assumed ANTI dependence between histLocal line 86 and histLocal line 86
+src/histogram.c(78): (col. 3) remark: loop was not vectorized: not inner loop
+src/histogram.c(93): (col. 5) remark: vectorization support: reference hist has aligned access
+src/histogram.c(93): (col. 5) remark: vectorization support: reference hist has aligned access
+src/histogram.c(93): (col. 5) remark: vectorization support: reference histLocal has aligned access
+src/histogram.c(92): (col. 4) remark: LOOP WAS VECTORIZED
+src/histogram.c(15): (col. 2) remark: *MIC* loop was not vectorized: existence of vector dependence
+src/histogram.c(17): (col. 3) remark: *MIC* vector dependence: assumed FLOW dependence between hist line 17 and age line 16
+src/histogram.c(16): (col. 30) remark: *MIC* vector dependence: assumed ANTI dependence between age line 16 and hist line 17
+src/histogram.c(17): (col. 3) remark: *MIC* vector dependence: assumed ANTI dependence between hist line 17 and hist line 17
+src/histogram.c(17): (col. 3) remark: *MIC* vector dependence: assumed FLOW dependence between hist line 17 and hist line 17
+src/histogram.c(17): (col. 3) remark: *MIC* vector dependence: assumed FLOW dependence between hist line 17 and hist line 17
+src/histogram.c(17): (col. 3) remark: *MIC* vector dependence: assumed ANTI dependence between hist line 17 and hist line 17
+src/histogram.c(16): (col. 30) remark: *MIC* vector dependence: assumed ANTI dependence between age line 16 and hist line 17
+src/histogram.c(17): (col. 3) remark: *MIC* vector dependence: assumed FLOW dependence between hist line 17 and age line 16
+src/histogram.c(75): (col. 3) remark: *MIC* vectorization support: reference histLocal has aligned access
+src/histogram.c(75): (col. 3) remark: *MIC* LOOP WAS VECTORIZED
+src/histogram.c(75): (col. 3) remark: *MIC* vectorization support: reference histLocal has aligned access
+src/histogram.c(75): (col. 3) remark: *MIC* remainder loop was not vectorized: vectorization possible but seems inefficient
+src/histogram.c(75): (col. 3) remark: *MIC* vectorization support: unroll factor set to 2
+src/histogram.c(83): (col. 5) remark: *MIC* vectorization support: reference histIdx has aligned access
+src/histogram.c(83): (col. 5) remark: *MIC* vectorization support: reference age has aligned access
+src/histogram.c(82): (col. 4) remark: *MIC* LOOP WAS VECTORIZED
+src/histogram.c(83): (col. 5) remark: *MIC* vectorization support: reference histIdx has aligned access
+src/histogram.c(83): (col. 5) remark: *MIC* vectorization support: reference age has aligned access
+src/histogram.c(82): (col. 4) remark: *MIC* REMAINDER LOOP WAS VECTORIZED
+src/histogram.c(85): (col. 4) remark: *MIC* loop was not vectorized: existence of vector dependence
+src/histogram.c(78): (col. 3) remark: *MIC* loop was not vectorized: not inner loop
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference hist has aligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference hist has aligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference histLocal has aligned access
+src/histogram.c(92): (col. 4) remark: *MIC* LOOP WAS VECTORIZED
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference hist has unaligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference hist has unaligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference histLocal has unaligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: unaligned access used inside loop body
+src/histogram.c(92): (col. 4) remark: *MIC* PEEL LOOP WAS VECTORIZED
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference hist has aligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference hist has aligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: reference histLocal has unaligned access
+src/histogram.c(93): (col. 5) remark: *MIC* vectorization support: unaligned access used inside loop body
+src/histogram.c(92): (col. 4) remark: *MIC* REMAINDER LOOP WAS VECTORIZED

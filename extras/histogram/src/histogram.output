@@ -1,0 +1,61 @@
+Initialization...complete.
+Iteration 0... time: 0.319 sec
+ Performance: 3.362 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 1... time: 0.311 sec
+ Performance: 3.455 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 2... time: 0.303 sec
+ Performance: 3.546 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 3... time: 0.247 sec
+ Performance: 4.352 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 4... time: 0.291 sec
+ Performance: 3.691 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 5... time: 0.308 sec
+ Performance: 3.483 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 6... time: 0.300 sec
+ Performance: 3.575 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 7... time: 0.325 sec
+ Performance: 3.304 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 8... time: 0.296 sec
+ Performance: 3.625 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 9... time: 0.281 sec
+ Performance: 3.819 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 0... time: 0.720 sec
+ Performance: 1.491 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 1... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 2... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 3... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 4... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 5... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 6... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 7... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 8... time: 0.130 sec
+ Performance: 8.260 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839
+Iteration 9... time: 0.140 sec
+ Performance: 7.670 billion numbers / sec
+Result:         480187231       198923578       152622383       128660793      113347839

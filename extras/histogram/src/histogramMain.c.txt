@@ -1,0 +1,35 @@
+src/histogramMain.c(36): (col. 3) remark: vectorization support: reference age has aligned access
+src/histogramMain.c(36): (col. 3) remark: vectorization support: reference age has aligned access
+src/histogramMain.c(36): (col. 3) remark: vectorization support: reference age has aligned access
+src/histogramMain.c(35): (col. 2) remark: vectorization support: unroll factor set to 2
+src/histogramMain.c(35): (col. 2) remark: LOOP WAS VECTORIZED
+src/histogramMain.c(39): (col. 2) remark: vectorization support: reference refGroup has unaligned access
+src/histogramMain.c(39): (col. 2) remark: vectorization support: unaligned access used inside loop body
+src/histogramMain.c(39): (col. 2) remark: LOOP WAS VECTORIZED
+src/histogramMain.c(43): (col. 2) remark: vectorization support: reference (unknown) has aligned access
+src/histogramMain.c(43): (col. 2) remark: LOOP WAS VECTORIZED
+src/histogramMain.c(43): (col. 2) remark: vectorization support: call to function printf cannot be vectorized
+src/histogramMain.c(43): (col. 2) remark: loop was not vectorized: existence of vector dependence
+src/histogramMain.c(43): (col. 2) remark: loop was not vectorized: not inner loop
+src/histogramMain.c(43): (col. 2) remark: vectorization support: call to function printf cannot be vectorized
+src/histogramMain.c(43): (col. 2) remark: loop was not vectorized: existence of vector dependence
+src/histogramMain.c(43): (col. 2) remark: loop was not vectorized: not inner loop
+src/histogramMain.c(61): (col. 3) remark: vectorization support: reference group has aligned access
+src/histogramMain.c(61): (col. 3) remark: LOOP WAS VECTORIZED
+src/histogramMain.c(71): (col. 6) remark: vectorization support: call to function printf cannot be vectorized
+src/histogramMain.c(70): (col. 5) remark: loop was not vectorized: existence of vector dependence
+src/histogramMain.c(67): (col. 3) remark: loop was not vectorized: not inner loop
+src/histogramMain.c(80): (col. 4) remark: vectorization support: call to function printf cannot be vectorized
+src/histogramMain.c(79): (col. 3) remark: loop was not vectorized: existence of vector dependence
+src/histogramMain.c(60): (col. 2) remark: loop was not vectorized: not inner loop
+src/histogramMain.c(61): (col. 3) remark: *MIC* vectorization support: reference group has aligned access
+src/histogramMain.c(61): (col. 3) remark: *MIC* LOOP WAS VECTORIZED
+src/histogramMain.c(61): (col. 3) remark: *MIC* vectorization support: reference group has aligned access
+src/histogramMain.c(61): (col. 3) remark: *MIC* remainder loop was not vectorized: vectorization possible but seems inefficient
+src/histogramMain.c(61): (col. 3) remark: *MIC* vectorization support: unroll factor set to 2
+src/histogramMain.c(71): (col. 6) remark: *MIC* vectorization support: call to function printf cannot be vectorized
+src/histogramMain.c(70): (col. 5) remark: *MIC* loop was not vectorized: existence of vector dependence
+src/histogramMain.c(67): (col. 3) remark: *MIC* loop was not vectorized: not inner loop
+src/histogramMain.c(80): (col. 4) remark: *MIC* vectorization support: call to function printf cannot be vectorized
+src/histogramMain.c(79): (col. 3) remark: *MIC* loop was not vectorized: existence of vector dependence
+src/histogramMain.c(60): (col. 2) remark: *MIC* loop was not vectorized: not inner loop
