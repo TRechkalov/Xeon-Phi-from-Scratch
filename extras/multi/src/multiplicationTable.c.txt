@@ -1,0 +1,14 @@
+src/multiplicationTable.c(5): (col. 4) remark: vectorization support: reference table has aligned access
+src/multiplicationTable.c(4): (col. 3) remark: LOOP WAS VECTORIZED
+src/multiplicationTable.c(3): (col. 2) remark: loop was not vectorized: not inner loop
+src/multiplicationTable.c(92): (col. 4) remark: vectorization support: reference table has aligned access
+src/multiplicationTable.c(91): (col. 3) remark: LOOP WAS VECTORIZED
+src/multiplicationTable.c(90): (col. 2) remark: loop was not vectorized: not inner loop
+src/multiplicationTable.c(92): (col. 4) remark: *MIC* vectorization support: reference table has aligned access
+src/multiplicationTable.c(91): (col. 3) remark: *MIC* LOOP WAS VECTORIZED
+src/multiplicationTable.c(92): (col. 4) remark: *MIC* vectorization support: reference table has unaligned access
+src/multiplicationTable.c(92): (col. 4) remark: *MIC* vectorization support: unaligned access used inside loop body
+src/multiplicationTable.c(91): (col. 3) remark: *MIC* PEEL LOOP WAS VECTORIZED
+src/multiplicationTable.c(92): (col. 4) remark: *MIC* vectorization support: reference table has aligned access
+src/multiplicationTable.c(91): (col. 3) remark: *MIC* REMAINDER LOOP WAS VECTORIZED
+src/multiplicationTable.c(90): (col. 2) remark: *MIC* loop was not vectorized: not inner loop

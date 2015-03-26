@@ -1,0 +1,34 @@
+src/multiplicationTableMain.c(22): warning #181: argument of type "size_t={unsigned long}" is incompatible with format "%d", expecting argument of type "int"
+  	printf("%d\n",n);
+  	              ^
+
+src/multiplicationTableMain.c(31): (col. 3) remark: vectorization support: reference data has aligned access
+src/multiplicationTableMain.c(30): (col. 2) remark: LOOP WAS VECTORIZED
+src/multiplicationTableMain.c(43): (col. 2) remark: vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(43): (col. 2) remark: vectorization support: call to function omp_get_wtime cannot be vectorized
+src/multiplicationTableMain.c(43): (col. 2) remark: vectorization support: call to function multiplicationTable cannot be vectorized
+src/multiplicationTableMain.c(43): (col. 2) remark: vectorization support: call to function omp_get_wtime cannot be vectorized
+src/multiplicationTableMain.c(43): (col. 2) remark: vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(43): (col. 2) remark: vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(43): (col. 2) remark: vectorization support: call to function fflush cannot be vectorized
+src/multiplicationTableMain.c(43): (col. 2) remark: loop was not vectorized: existence of vector dependence
+src/multiplicationTableMain.c(61): (col. 3) remark: vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(62): (col. 21) remark: vectorization support: call to function omp_get_wtime cannot be vectorized
+src/multiplicationTableMain.c(63): (col. 3) remark: vectorization support: call to function multiplicationTable cannot be vectorized
+src/multiplicationTableMain.c(64): (col. 21) remark: vectorization support: call to function omp_get_wtime cannot be vectorized
+src/multiplicationTableMain.c(76): (col. 3) remark: vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(77): (col. 3) remark: vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(79): (col. 3) remark: vectorization support: call to function fflush cannot be vectorized
+src/multiplicationTableMain.c(60): (col. 2) remark: loop was not vectorized: existence of vector dependence
+src/multiplicationTableMain.c(22): warning #181: *MIC* argument of type "size_t={unsigned long}" is incompatible with format "%d", expecting argument of type "int"
+  	printf("%d\n",n);
+  	              ^
+
+src/multiplicationTableMain.c(61): (col. 3) remark: *MIC* vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(62): (col. 21) remark: *MIC* vectorization support: call to function omp_get_wtime cannot be vectorized
+src/multiplicationTableMain.c(63): (col. 3) remark: *MIC* vectorization support: call to function multiplicationTable cannot be vectorized
+src/multiplicationTableMain.c(64): (col. 21) remark: *MIC* vectorization support: call to function omp_get_wtime cannot be vectorized
+src/multiplicationTableMain.c(76): (col. 3) remark: *MIC* vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(77): (col. 3) remark: *MIC* vectorization support: call to function printf cannot be vectorized
+src/multiplicationTableMain.c(79): (col. 3) remark: *MIC* vectorization support: call to function fflush cannot be vectorized
+src/multiplicationTableMain.c(60): (col. 2) remark: *MIC* loop was not vectorized: existence of vector dependence

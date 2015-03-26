@@ -1,6 +1,6 @@
 # compile options
 CC = icc
-CFLAGS = -openmp -mkl -std=c99 -Wall -sox -O3 
+CFLAGS = -openmp -mkl -std=c99 -Wall -sox -O3 -vec-report6
 #-vec-report6 - add this to get vectorization report. vec6 shows information about success. vec5 gives information only about vectorization fails.
 # In original video used ICC 15 so this options is for newest version of Intel Compiler.
 # -opt-report-phase:vec -opt-report-stdout
@@ -12,21 +12,28 @@ SRC_PATH=src
 TEST_PATH=test
 EXTRAS_PATH=extras
 
-OBJECTS = $(BUILD_PATH)/histogramMain.o $(BUILD_PATH)/histogram.o
+HISTOGRAM = $(BUILD_PATH)/histogramMain.o $(BUILD_PATH)/histogram.o 
+MULTIPLICATION_TABLE = $(BUILD_PATH)/multiplicationTableMain.o $(BUILD_PATH)/multiplicationTable.o
+
 
 all: histogram 
 
 $(BUILD_PATH)/histogramMain.o: $(SRC_PATH)/histogramMain.c
 $(BUILD_PATH)/histogram.o: $(SRC_PATH)/histogram.c
+$(BUILD_PATH)/multiplicationTableMain.o: $(SRC_PATH)/multiplicationTableMain.c
+$(BUILD_PATH)/multiplicationTable.o: $(SRC_PATH)/multiplicationTable.c
 
 # add this if you need vectorization reports in files
 #2> $(EXTRAS_PATH)/histogram/$<.txt
-$(OBJECTS):
-	$(CC) $(CFLAGS) -c $< -o $@ 
+$(HISTOGRAM) $(MULTIPLICATION_TABLE):
+	$(CC) $(CFLAGS) -c $< -o $@ 2> $(EXTRAS_PATH)/multi/$<.txt
 	
-
-histogram: clean $(OBJECTS)
-	$(CC) $(CFLAGS) -o $(BUILD_PATH)/histogramExecutive $(OBJECTS)
+multi: clean $(MULTIPLICATION_TABLE)
+	$(CC) $(CFLAGS) -o $(BUILD_PATH)/multiplicationTableExecutive $(MULTIPLICATION_TABLE)
+	./$(BUILD_PATH)/multiplicationTableExecutive
+	
+histogram: clean $(HISTOGRAM)
+	$(CC) $(CFLAGS) -o $(BUILD_PATH)/histogramExecutive $(HISTOGRAM)
 	./$(BUILD_PATH)/histogramExecutive
 	
 clean:
