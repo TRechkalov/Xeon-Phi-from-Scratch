@@ -23,7 +23,7 @@ int main(int argv, char* argc[]){
 	const int nTrials = 10;
 	//const int nTrials = 4;
 	
-	float* age = (float*) _mm_malloc(sizeof(int)*n, 64);
+	float* age = (float*) _mm_malloc(sizeof(float)*n, 64);
 	
 	int refGroup[m];
 	
