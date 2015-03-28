@@ -1,0 +1,5 @@
+src/euclidDistances.c(106): error: omp for directive requires a proceeding for statement
+  		{
+  		^
+
+compilation aborted for src/euclidDistances.c (code 2)

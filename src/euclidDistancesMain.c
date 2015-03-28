@@ -3,78 +3,29 @@
 #include <math.h>
 #include <mkl_vsl.h>
 
-double euclidDistance(const double* point1, const double* point2, const int pointWidth){
-	double result = 0;
-	/*for(int i=0;i<pointWidth;++i){
-		printf("%f ", point1[i]);
-	}
-	
-	printf("|");
-	
-	for(int i=0;i<pointWidth;++i){
-		printf("%f ", point2[i]);
-	}*/
-	
-	for(int i=0;i<pointWidth;++i){
-		result+=(point1[i]-point2[i])*(point1[i]-point2[i]);
-	}
-	
-	//result = sqrt(result);
-	//printf("(%f)\n", result);
-	//return result;
-	return sqrt(result);
-	//printf("(%f)\n", sqrtf(result));
-	
-	/*for(int i=0;i<pointWidth;++i){
-		result+=(point1[i]-point2[i])*(point1[i]-point2[i]);
-	}*/
-	
-	//return sqrtf(result);
-}
-
-void euclidDistancesReference(const double* data, double* const distances, const int n, const int pointWidth){
-	double point[pointWidth] __attribute__((aligned(64)));
-	point[:]=data[0:pointWidth];
-	
-	printf("\n");
-	
-	for(int i=0;i<n;++i){
-		distances[i] = euclidDistance(point, data+i*pointWidth, pointWidth);
-		/*for(int i=0;i<n;++i){
-			printf("%f ", distances[i]);
-		}
-		printf("\n");*/
-	}
-
-	for(int i=0;i<n;++i){
-		printf("%f ", distances[i]);
-	}
-}
-/*
 __declspec(target(mic))
-void histogramReference(const double* age, int* const hist, const int n, const double groupWidth);
+void euclidDistancesReference(const double* data, double* const distances, const int n, const int pointWidth);
 
 __declspec(target(mic))
-void histogram(const double* age, int* const hist, const int n, const double groupWidth, const int m);
+void euclidDistances(const double* data, double* const distances, const int n, const int pointWidth);
 
 __declspec(target(mic))
-void test(const double* age, int* const refGroup, const int n, const double groupWidth, const int m, const int nTrials);*/
+void test(const double* data, double* const refDistances, const int n, const int pointWidth, const int nTrials);
 
 int main(int argv, char* argc[]){
 	#pragma offload_transfer target(mic)
 
-	//const size_t n=1L<<30L;
-	const size_t n=1L<<3L;
-	const size_t pointWidth=2;
+	const size_t n=1L<<26L;
+	//const size_t n=1L<<24L;
+	const size_t pointWidth=3;
 	const double maxValue = 99.999;
-	//const double groupWidth = 20.0f;
-	//const size_t m = (size_t)floorf(maxAge/groupWidth + 0.1f);
-	//const int nTrials = 10;
-	const int nTrials = 4;
+	const int nTrials = 10;
+	//const int nTrials = 4;
 	
 	double* data = (double*) _mm_malloc(sizeof(double)*n*pointWidth, 64);
 	
-	double refGroup[n]; // reference distances
+	//double refDistances[n] __attribute__((aligned(64))); // reference distances
+	double* refDistances = (double*) _mm_malloc(sizeof(double)*n, 64); // reference distances
 	
 	printf("Initialization...");fflush(0); // stdout
 	
@@ -85,58 +36,64 @@ int main(int argv, char* argc[]){
 	/*for(int i=0;i<n*pointWidth;++i){
 		printf("%f ", data[i]);
 	}*/
-
-	
-	refGroup[:]=0;
-	euclidDistancesReference(data, refGroup, n, pointWidth);
-	
+	euclidDistancesReference(data, refDistances, n, pointWidth);
+	/*
 	for(int i=0;i<n;++i){
-		printf("%f ", refGroup[i]);
-	}printf("\n");
+		printf("%f ", refDistances[i]);
+	}printf("\n");*/
 	
 	printf("complete.\n");fflush(0); // stdout
-	/*
-	test(age, refGroup, n, groupWidth, m ,nTrials);
+	
+	test(data, refDistances, n, pointWidth ,nTrials);
 	#pragma offload target(mic) \
-					in(age: length(n)) \
-					in(refGroup: length(m)) \
+					in(data: length(n*pointWidth)) \
+					in(refDistances: length(n)) \
 					in(n) \
-					in(groupWidth) \
-					in(m) \
+					in(pointWidth) \
 					in(nTrials) 
 	{
-		test(age, refGroup, n, groupWidth, m ,nTrials);
-	}*/
+		test(data, refDistances, n, pointWidth ,nTrials);
+	}
 	
 	_mm_free(data);
+	_mm_free(refDistances);
 }
 
-/*
-void test(const double* age, int* const refGroup, const int n, const double groupWidth, const int m, const int nTrials){
-	int group[m];
+
+void test(const double* data, double* const refDistances, const int n, const int pointWidth, const int nTrials){
+	double* distances = (double*) _mm_malloc(sizeof(double)*n, 64);
 	for(int t=0;t<nTrials;++t){
-		group[:]=0;
+		for(int i=0;i<n;++i){
+			distances[i]=0;
+		}
 		printf("Iteration %d...", t);
 		const double t0 = omp_get_wtime();
-		histogram(age, group, n, groupWidth, m);
+		euclidDistances(data, distances, n, pointWidth);
 		const double t1 = omp_get_wtime();
 		
-		for(int i=0;i<m;++i){
-			if(fabs((double)(refGroup[i] - group[i])) > 1e-4*fabs((double)refGroup[i] + group[i])){
+		for(int i=0;i<n;++i){
+			if(fabs(refDistances[i] - distances[i]) > 1e-4*fabs(refDistances[i] + distances[i])){
 				printf("Result is incorrect!\n");
-				for(int i=0;i<m;++i){
-					printf(" (%d vs %d)", group[i], refGroup[i]);
-				}
+				/*for(int j=0;j<n;++j){
+					printf(" (%d vs %d)", distances[j], refDistances[j]);
+				}*/
+				break;
 			}
 		}
 		printf(" time: %.3f sec\n", t1-t0);
-		printf(" Performance: %.3f billion numbers / sec \n", n/(t1-t0)*1.0e-9);
+		printf(" Performance: %.3f billion numbers / sec \n", n*(pointWidth+1)/(t1-t0)*1.0e-9);
 		
-		printf("Result: ");
-		for(int i=0;i<m;++i){
-			printf("\t%d", group[i]);
+		/*for(int i=n-8;i<n;++i){
+			printf("%f ", distances[i]);
 		}
-		printf("\n");
+		printf("\n");*/
+		/*
+		printf("Result: ");
+		for(int i=0;i<n;++i){
+			printf("\t%d", distances[i]);
+		}
+		printf("\n");*/
 		fflush(0);
 	}
-}*/
+	_mm_free(distances);
+}

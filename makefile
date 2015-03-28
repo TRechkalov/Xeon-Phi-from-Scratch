@@ -14,7 +14,7 @@ EXTRAS_PATH=extras
 
 HISTOGRAM = $(BUILD_PATH)/histogramMain.o $(BUILD_PATH)/histogram.o 
 MULTIPLICATION_TABLE = $(BUILD_PATH)/multiplicationTableMain.o $(BUILD_PATH)/multiplicationTable.o
-EUCLID_DISTANCES = $(BUILD_PATH)/euclidDistancesMain.o
+EUCLID_DISTANCES = $(BUILD_PATH)/euclidDistancesMain.o $(BUILD_PATH)/euclidDistances.o 
 
 
 all: histogram 
@@ -24,6 +24,7 @@ $(BUILD_PATH)/histogram.o: $(SRC_PATH)/histogram.c
 $(BUILD_PATH)/multiplicationTableMain.o: $(SRC_PATH)/multiplicationTableMain.c
 $(BUILD_PATH)/multiplicationTable.o: $(SRC_PATH)/multiplicationTable.c
 $(BUILD_PATH)/euclidDistancesMain.o: $(SRC_PATH)/euclidDistancesMain.c
+$(BUILD_PATH)/euclidDistances.o: $(SRC_PATH)/euclidDistances.c
 
 # add this if you need vectorization reports in files
 #2> $(EXTRAS_PATH)/histogram/$<.txt

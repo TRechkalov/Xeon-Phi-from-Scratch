@@ -1,0 +1,6 @@
+src/euclidDistancesMain.c(52): (col. 2) remark: loop was not vectorized: nonstandard loop is not a vectorization candidate
+src/euclidDistancesMain.c(52): (col. 2) remark: loop was not vectorized: not inner loop
+src/euclidDistancesMain.c(79): (col. 3) remark: loop was not vectorized: nonstandard loop is not a vectorization candidate
+src/euclidDistancesMain.c(71): (col. 2) remark: loop was not vectorized: not inner loop
+src/euclidDistancesMain.c(79): (col. 3) remark: *MIC* loop was not vectorized: nonstandard loop is not a vectorization candidate
+src/euclidDistancesMain.c(71): (col. 2) remark: *MIC* loop was not vectorized: not inner loop
