@@ -7,6 +7,8 @@ Project structure consist of src, include, test, build and extras. Extras contai
 # Histogram
 First example is based on video from Colfax Research (http://research.colfaxinternational.com/). In this task we will generate number of people ages and make histogram about it.
 
+Make target: histogram
+
 Keywords: OpenMP, loop vectorization, MKL VSL, array alignment, offload mode.
 
 Minor info about MKL VSL is available here http://habrahabr.ru/post/215775/ (RUS).
@@ -38,6 +40,8 @@ Major differences from Colfax version:
 
 # Multiplication table
 It is necessary to make multiplication table for specified numbers list. 
+
+Make target: multi
 
 Keywords: OpenMP, loop vectorization, array alignment, offload mode.
 
