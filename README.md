@@ -9,7 +9,7 @@ First example is based on video from Colfax Research (http://research.colfaxinte
 
 Make target: histogram
 
-Keywords: OpenMP, loop vectorization, MKL VSL, array alignment, offload mode.
+Keywords: OpenMP, loop vectorization, MKL VSL, array alignment, offload mode, float.
 
 Minor info about MKL VSL is available here http://habrahabr.ru/post/215775/ (RUS).
 
@@ -43,10 +43,23 @@ It is necessary to make multiplication table for specified numbers list.
 
 Make target: multi
 
-Keywords: OpenMP, loop vectorization, array alignment, offload mode.
+Keywords: OpenMP, loop vectorization, array alignment, offload mode, int.
 
 Files:
 
 1. multiplicationTableMain.c - generates test data, controls offload calls
 
 2. multiplicationTable.c - contains multiplication table function implementations 
+
+# Euclid distances example
+In this example I generate big array of points. Then I take first point and count distances from each point to first point. 
+
+Make target: euclid
+
+Keywords: OpenMP, loop vectorization, MKL VSL, array alignment, offload mode, double.
+
+Files:
+
+1. euclidDistancesMain.c - generates test data, controls offload calls
+
+2. euclidDistances.c - contains Euclid distance function implementations 
