@@ -7,6 +7,8 @@ Project structure consist of src, include, test, build and extras. Extras contai
 # Histogram
 First example is based on video from Colfax Research (http://research.colfaxinternational.com/). In this task we will generate number of people ages and make histogram about it.
 
+Make target: histogram
+
 Keywords: OpenMP, loop vectorization, MKL VSL, array alignment, offload mode.
 
 Minor info about MKL VSL is available here http://habrahabr.ru/post/215775/ (RUS).
@@ -15,7 +17,7 @@ Files:
 
 1. histogramMain.c - generates test data, controls offload calls
 
-2. histogram.c - contains histogram function implementations, 
+2. histogram.c - contains histogram function implementations 
 
 Information source: 
 
@@ -35,3 +37,16 @@ Major differences from Colfax version:
 3. In histogram.c presented all steps of histogram function modifications.
 
 4. There are no final code with using parallel execution in videos. So OpenMP version is made by my own. It works not so good as in Colfax slides but it is finally faster then CPU :)
+
+# Multiplication table
+It is necessary to make multiplication table for specified numbers list. 
+
+Make target: multi
+
+Keywords: OpenMP, loop vectorization, array alignment, offload mode.
+
+Files:
+
+1. multiplicationTableMain.c - generates test data, controls offload calls
+
+2. multiplicationTable.c - contains multiplication table function implementations 
