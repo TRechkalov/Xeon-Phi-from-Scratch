@@ -89,9 +89,7 @@ void histogram(const float* age, int* const hist, const int n, const float group
 		
 		#pragma omp critical
 		{
-			for(int i=0;i<m;++i){
-				hist[i]+=histLocal[i];
-			}
+			hist[0:m]+=histLocal[0:m];
 		}
 	}
 }

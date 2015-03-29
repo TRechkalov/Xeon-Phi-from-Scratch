@@ -1,0 +1,38 @@
+Parameters:
+	const size_t n=1L<<15L; // size of data
+	const size_t m=n*n; // size of table
+	const int nTrials = 8;
+
+Initialization...complete.
+Iteration 0... time: 0.400 sec
+ Performance: 2.687 billion numbers / sec
+Iteration 1... time: 0.214 sec
+ Performance: 5.016 billion numbers / sec
+Iteration 2... time: 0.214 sec
+ Performance: 5.016 billion numbers / sec
+Iteration 3... time: 0.214 sec
+ Performance: 5.026 billion numbers / sec
+Iteration 4... time: 0.214 sec
+ Performance: 5.016 billion numbers / sec
+Iteration 5... time: 0.214 sec
+ Performance: 5.019 billion numbers / sec
+Iteration 6... time: 0.215 sec
+ Performance: 5.005 billion numbers / sec
+Iteration 7... time: 0.214 sec
+ Performance: 5.016 billion numbers / sec
+Iteration 0... time: 0.417 sec
+ Performance: 2.577 billion numbers / sec
+Iteration 1... time: 0.059 sec
+ Performance: 18.135 billion numbers / sec
+Iteration 2... time: 0.059 sec
+ Performance: 18.138 billion numbers / sec
+Iteration 3... time: 0.059 sec
+ Performance: 18.300 billion numbers / sec
+Iteration 4... time: 0.059 sec
+ Performance: 18.163 billion numbers / sec
+Iteration 5... time: 0.059 sec
+ Performance: 18.257 billion numbers / sec
+Iteration 6... time: 0.059 sec
+ Performance: 18.185 billion numbers / sec
+Iteration 7... time: 0.059 sec
+ Performance: 18.179 billion numbers / sec

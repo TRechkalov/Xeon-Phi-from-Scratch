@@ -1,0 +1,49 @@
+Parameters:
+
+	const size_t n=1L<<26L; // point number
+	const size_t pointWidth=3;
+	const double maxValue = 99.999;
+	const int nTrials = 10;
+
+
+Initialization...complete.
+Iteration 0... time: 0.406 sec
+ Performance: 0.660 billion numbers / sec
+Iteration 1... time: 0.136 sec
+ Performance: 1.980 billion numbers / sec
+Iteration 2... time: 0.134 sec
+ Performance: 2.003 billion numbers / sec
+Iteration 3... time: 0.135 sec
+ Performance: 1.985 billion numbers / sec
+Iteration 4... time: 0.133 sec
+ Performance: 2.025 billion numbers / sec
+Iteration 5... time: 0.133 sec
+ Performance: 2.020 billion numbers / sec
+Iteration 6... time: 0.133 sec
+ Performance: 2.020 billion numbers / sec
+Iteration 7... time: 0.133 sec
+ Performance: 2.016 billion numbers / sec
+Iteration 8... time: 0.133 sec
+ Performance: 2.022 billion numbers / sec
+Iteration 9... time: 0.133 sec
+ Performance: 2.020 billion numbers / sec
+Iteration 0... time: 0.418 sec
+ Performance: 0.643 billion numbers / sec
+Iteration 1... time: 0.028 sec
+ Performance: 9.439 billion numbers / sec
+Iteration 2... time: 0.028 sec
+ Performance: 9.427 billion numbers / sec
+Iteration 3... time: 0.028 sec
+ Performance: 9.441 billion numbers / sec
+Iteration 4... time: 0.028 sec
+ Performance: 9.450 billion numbers / sec
+Iteration 5... time: 0.028 sec
+ Performance: 9.444 billion numbers / sec
+Iteration 6... time: 0.028 sec
+ Performance: 9.456 billion numbers / sec
+Iteration 7... time: 0.028 sec
+ Performance: 9.452 billion numbers / sec
+Iteration 8... time: 0.028 sec
+ Performance: 9.444 billion numbers / sec
+Iteration 9... time: 0.028 sec
+ Performance: 9.462 billion numbers / sec
