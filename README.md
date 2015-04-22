@@ -70,3 +70,11 @@ Files:
 1. euclidDistancesMain.c - generates test data, controls offload calls
 
 2. euclidDistances.c - contains Euclid distance function implementations 
+
+# Minor examples
+
+Added a couple of minor examples.
+
+1. Example of using intrinics adopted from http://habrahabr.ru/company/intel/blog/205552/ (RUS)
+
+2. Available memory test. This program allocates memory in infinite loop. Each memory chunk size increased for 32 megabytes.
